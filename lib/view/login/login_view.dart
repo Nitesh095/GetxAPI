@@ -59,7 +59,7 @@ class _LoginViewState extends State<LoginView> {
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: "Password",
-                  hintText: "Abc@123",
+                  hintText: "Nitabc_2387",
                   prefixIcon: const Icon(Icons.lock),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
