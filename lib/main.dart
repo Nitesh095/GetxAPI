@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_part2/res/getx_localization/languages.dart';
 import 'package:getx_part2/res/routes/routes.dart';
-import 'package:getx_part2/view_model/bindings/bindings.dart';
 import 'package:getx_part2/view_model/splash_services.dart';
 
 void main() {
@@ -37,7 +36,6 @@ class _MyAppState extends State<MyApp> {
       translations: Languages(),
       locale: const Locale("en", "US"),
       fallbackLocale: const Locale("en", "US"),
-      initialBinding: HomeBindings(),
       getPages: AppRoutes.appRoutes(),
     );
   }

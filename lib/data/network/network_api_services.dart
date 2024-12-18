@@ -14,11 +14,10 @@ class NetworkApiServices extends BaseApiServices {
           await http.get(Uri.parse(url)).timeout(const Duration(seconds: 20));
       responseJson = returnResponse(response);
     } on SocketException {
-      throw InternetExceptions("");
+      throw InternetExceptions("No Internet Exception");
     } on TimeoutException {
-      throw TimeoutException("");
+      throw TimeoutException('Timeout Occured');
     }
-
     return responseJson;
   }
 
@@ -26,7 +25,9 @@ class NetworkApiServices extends BaseApiServices {
   Future<dynamic> postApi(var data, String url) async {
     dynamic responseJson;
     try {
-      var response = await http.post(Uri.parse(url), body: data).timeout(const Duration(seconds: 20));
+      var response = await http
+          .post(Uri.parse(url), body: data)
+          .timeout(const Duration(seconds: 20));
       responseJson = returnResponse(response);
     } on SocketException {
       throw InternetExceptions("No Internet Exception");
