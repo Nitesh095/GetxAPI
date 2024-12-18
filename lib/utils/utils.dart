@@ -7,7 +7,7 @@ class Utils {
   static void onFocusChange(
       BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
     currentFocus.unfocus();
-    Focus.of(context).requestFocus(nextFocus);
+    FocusScope.of(context).requestFocus(nextFocus);
   }
 
   static toatMessage(String message) {
