@@ -38,5 +38,6 @@ class _MyAppState extends State<MyApp> {
       fallbackLocale: const Locale("en", "US"),
       getPages: AppRoutes.appRoutes(),
     );
+    // nitesh added this comment
   }
 }
